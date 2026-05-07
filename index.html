@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 class="title">Select a Plan</h1>
+    <main class="container">
+        <div class="plans-container">
+            <label for="annual-plan-selector" class="plans annual-plan">
+                <input type="radio" name="plan-container" id="annual-plan-selector" value="annual-plan-select" class="plan-selector" checked>
+                    <div class="annual-plan-description">
+                        <h3 class="plan-title">Annual Plan</h3>
+                        <small class="plan-description">Save 20% on your annual subscription.</small>
+                    </div>
+                    <section class="annual-plan-price">
+                        <h3 class="price">$24.95 / month</h3>
+                        <small>$299.40 / year</small>
+                    </section>
+            </label>
+            <label for="monthly-plan-selector" class="plans monthly-plan">
+                <input type="radio" name="plan-container" id="monthly-plan-selector" value="monthly-plan-select" class="plan-selector">
+                    <div class="monthly-plan-description">
+                        <h3 class="plan-title">Monthly Plan</h3>
+                        <small class="plan-description">Pay monthly and cancel anytime.</small>
+                    </div>
+                    <section class="annual-plan-price">
+                        <h3 class="price">$29.99 / month</h3>
+                    </section>
+            </label>
+        </div>
+        <div class="checkout-container">
+            <h3 class="plan-type"><span class="plan-type-description">Annual Plan</span><span class="plan-type-ammount">$299.40</span></h3>
+            <div class="billing"><div class="billing-description">
+                <h4>Total</h4>
+                <small class="billing-period">Billed every year.</small>
+                </div>
+                <h3 class="billing-ammount">U$ 299.40</h3>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

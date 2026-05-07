@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #f2f2f2;
+    --secondary-color: #000000;
+    --tertiary-color: #2962ff;
+    --quaternary-color: #7a7d86;
+    --quinary-color: #131722;
+}
+body{
+    background-color: var(--secondary-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+}
+
+.title{
+    font-size: 52px;
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.annual-plan, .monthly-plan{
+    display: grid;
+    grid-template-columns: 1fr 8fr 3fr;
+    gap: 1rem;
+    width: 100%;
+    padding: 1.5rem;
+    &:first-child{
+        border-bottom: 1px solid var(--quaternary-color);
+    }
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        background-color: var(--quinary-color);
+        cursor: pointer;
+        border-radius: 0.5rem;
+        border-bottom: none;
+    }
+    .plan-title{
+        margin-bottom: 0.5rem;
+    }
+}
+small{
+    color: var(--quaternary-color);
+}
+
+.annual-plan-price small{
+    display: block;
+    margin-top: .5rem;
+    text-align: right;
+}
+
+.checkout-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    min-width: 400px;
+    margin-top: 2rem;
+    background-color: var(--quinary-color);
+    padding: 1.5rem;
+    border-radius: 15px;
+    .plan-type, .billing, .checkout-btn{
+        width: 100%;
+        padding-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        &:nth-child(1){
+            border-bottom: 1px solid var(--quaternary-color);
+        }
+        &:nth-child(3){
+            background-color: var(--tertiary-color);
+            border: none;
+            outline: none;
+            color: var(--primary-color);
+            cursor: pointer;
+            border-radius: 15px;
+            padding: 1rem 35%;
+            font-size: 1.2rem;
+            transition: all 0.2s ease-in-out;
+            &:hover{
+                background-color: var(--quaternary-color);
+            }
+        }
+    }
+    .billing-period{
+        color: var(--quaternary-color);
+        display: block;
+        margin: 0.5rem ;
+    }
+}
+@media screen and (max-width:768px){
+    .container{
+        flex-direction: column;
+        gap: 40vh;
+    }
+    .checkout-container{
+        min-width: 80%;
+    }
+}
+
+
+
+.success-icon{
+    width: 100px;
+    height: 100px;
+    background-color: var(--tertiary-color);
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.back-btn{
+    background-color: var(--tertiary-color);
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 15px;
+    padding: 1rem 35%;
+    font-size: 1.2rem;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      background-color: var(--quaternary-color);
+    }
+}
